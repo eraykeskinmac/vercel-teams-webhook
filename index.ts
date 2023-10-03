@@ -9,7 +9,9 @@ const TEAMS_WEBHOOK_URL = process.env.TEAMS_WEBHOOK_URL!;
 app.use(bodyParser.json());
 
 app.post("/vercel-webhook", async (req, res) => {
+
     console.log(req.body)
+
   const deployInfo = req.body;
 
   const message = {
